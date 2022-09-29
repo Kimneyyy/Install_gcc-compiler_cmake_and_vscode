@@ -1,5 +1,5 @@
 @echo off
-title Install Assistent by Lukas Neher and Kimi Sickinger
+title Install Assistent by @VakeyYT and @Kimneyyy
 
 :Titel
 :: Require admin
