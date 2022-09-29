@@ -35,7 +35,7 @@ set i_cmake=0
 set auswahl=0
 
 echo Hallo, wilkommen bei der Installation.
-echo Um Option zu waehlen bitte etsprechende Zahl eingeben und mit Enter bestaetigen.
+echo Um Option zu waehlen bitte entsprechende Zahl eingeben und mit Enter bestaetigen.
 echo:
 
 :: Option waehle, wie installiert werden soll.
