@@ -1,0 +1,58 @@
+Zuvor:
+######
+cmake, gcc, cmake installiert und im Path eingetragen
+
+Dateistruktur des aktuellen Pfades (wo cmd-Befehle abgesetzt werden):
+##########################################################################
+./src
+CMakeLists.txt
+
+..siehe Testprojekt
+
+In "CMakeLists.txt" steht:
+###########################
+---- schnipp -----
+cmake_minimum_required(VERSION 3.16)
+project(Welt)
+
+file(GLOB_RECURSE USER_SOURCE_FILES
+    src/*.cpp
+)
+
+add_executable(Welt
+    ${USER_SOURCE_FILES}
+)
+
+
+target_include_directories(Welt PRIVATE
+    src
+)
+-----schnapp-----
+
+./src enthält:
+###############
+main.h:
+---- schnipp -----
+int main();
+-----schnapp-----
+
+main.cpp:
+---- schnipp -----
+#include <iostream>
+
+int main()
+{                                           
+    std::cout << "Hallo, du schöne Welt!" << std::endl; 
+
+    return 0;
+}
+-----schnapp-----
+
+
+Dann in Konsole diese Befehle absetzen:
+#######################################
+
+cmake . -G "MinGW Makefiles"    --> MAKEFILE wird erzeugt  
+mingw32-make                    --> MAKEFILE wird ausgeführt und Welt.exe wird erzeugt.
+
+:)
